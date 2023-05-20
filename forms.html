@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Alien Abduction Order Form</title>
+	<link href="css/forms.css" rel="stylesheet">
+	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+<link href="https://fonts.googleapis.com/css2?family=Flow+Circular&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="wrapper">
+		<section>
+			<h1>Alien Abduction Order Form</h1>
+			<p>Fill out the form below to place an order for an alien abduction by one of our fine UFOs.</p>
+		<form action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES" method="POST">
+			<input type="hidden" name="send_to" value="somerandom@adress.com">
+			<fieldset>
+			<legend>Your contact information</legend>
+			<label for="name">Your name</label>
+				<input type="text" id="name" name="name"> 
+			<label for="phone">Phone number</label>
+				<input type="tel" id="phone"
+				name="phone" placeholder="Don't fotget ur phone number">
+			<label for="email">Email</label>
+				<input type="email" id="email" name="email">
+			</fieldset>
+			<fieldset>
+			<legend>About your abduction </legend>
+			<label for="date">Requested  date</label>
+			<input type="date" id="date" name="date">
+			<label for="number">How many people would you like abducted?</label>
+			<input type="number" id="qty" name="qty" min="1" max="10">
+			</label>
+			<p>What type of UFO do you prefer?
+			</p>
+				<ul>
+					<label>
+						<input type="radio" name="ufotype"
+						value="classic">
+						Classic oval UFO
+					</label>
+					<label>
+						<!-- if we will put checked in the end it will mean this one will be choosen by -->
+						<input type="radio" name="ufotype"value="starwars" checked>Star Wars-style Imperial cruiser</label>
+					<label>
+						<input type="radio" name="ufotype"value="battlestar">Battlestar Galactica-style Viper</label>
+					<label>
+						<input type="radio" name="ufotype"value="cube">Borg-style cube</label>
+				</ul> 
+			<label for="abtype">What type of abduction experience do you want?</label>
+				<select id="abtype" name="abtype">
+					<option >Select one...</option>
+					<option value="tour">Tour of the solar system</option>
+					<!-- if we will change the selected to another part of option , the first propose of our list will be with selected atribute -->
+					<option value="alien" selected>Alien dinner and discussion</option>
+					<option value="aliendance">Alien dance lessons</option>
+					<option value="whale">Whale watching</option>
+				</select>
+			<p>Special requests:</p>
+				<textarea id="comments" name="comments" placeholder="tell me everyting mfcker"></textarea>
+			<label>
+				<input type="checkbox" value="subscribe" name="subscribe" checked>Add me to your email list</label>	
+			</fieldset>
+			<button type="submit">Press that button bitch:)</button>
+		</form>			
+		</section>
+		<aside>
+			<h3>Our Location</h3>
+			<address>
+				Frontend Masters &middot;
+				60 South 6th Street &middot;
+				Suite 3625 &middot;
+				Minneapolis, MN 55402
+			</address>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d81230.3867847862!2d30.473925744458004!3d50.488589743093144!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1684602668978!5m2!1sru!2sua" width="180" height="180" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</aside>
+	</div>
+	<script src="js/forms.js"></script>
+</body>
+</html>
+
+
+
+
+
